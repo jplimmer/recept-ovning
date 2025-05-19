@@ -1,43 +1,73 @@
 html {
     background-color: #a100004d;
     font-family: "Open Sans", sans-serif;
-    font-size: 24px;
+    font-size: medium;
 }
 
 body {
+    margin: 0;
+}
+
+main {
     width: 67vw;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     background-color: #fcfcfc;
 }
 
 .headline-img {
+    margin: 0;
     width: 100%;
-    height: 26vw;
+    aspect-ratio: 5/2;
     overflow: hidden;
 }
 
-header img {
+.headline-img img {
     width: 100%;
     height: 100%;
-    max-width: 100%;
-    max-height: 100%;
     object-fit: cover;
 }
 
 article {
     margin: 0 auto;
-    padding: 0 64px 64px;
+    padding: clamp(1.25rem, 3.35vw, 4rem);
     max-width: 100%;
-}
-
-section {
-    margin: 16px auto;
 }
 
 .note-card {
     background-color: #ebebeb;
+    margin: 1.5em 0;
+    padding: 1em;
+}
+
+section {
     margin: 0;
-    padding: 24px 24px;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    color:#a10000;
+    margin: 0;
+    font-size: clamp(1.8rem, 2.1vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(1.3rem, 1.68vw, 4.5rem);
+    margin-bottom: 0.7rem;
+}
+
+.notbold {
+    font-weight: normal;
+}
+
+p {
+    font-size: clamp(0.8rem, 1.25vw, 4rem);
+}
+
+ul,
+ol {
+    margin-top: 0;
+    padding-left: clamp(1.25rem, 2vw, 2.5rem);
+    font-size: clamp(0.8rem, 1.25vw, 4rem);
 }
 
 figure.serving-suggestions {
@@ -45,40 +75,39 @@ figure.serving-suggestions {
     margin: 0;
     padding: 0;
     gap: 2%;
-    height: 22vw;
 }
 
 .serving-suggestions img {
     display: block;
     margin: 0;
-    width: 48%;
-    max-height: 100%;
+    width: 49%;
+    aspect-ratio: 6/5;
     object-fit: cover;
 }
 
-h1 {
-    color:#a10000;
-    font-size: 40px;
+section.serving-suggestions {
+    margin-bottom: 0;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 11px;
-}
+@media (max-width: 450px) {
+    main {
+        width: 100vw;
+        margin: 0;
+    }
 
-ul {
-    margin-top: 0;
-}
+    .headline-img {
+        aspect-ratio: 1/1.13;
+    }
 
-ol {
-    margin-top: 0;
-}
+    figure.serving-suggestions {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto;
+    }
 
-li {
-    font-size: 24px;
-}
-
-.notbold {
-    font-weight: normal;
+    .serving-suggestions img {
+        width: 100%;
+        aspect-ratio: 4/5;
+    }
 }
 
