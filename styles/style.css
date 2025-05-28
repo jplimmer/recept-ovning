@@ -1,3 +1,6 @@
+/* ----------------------- */
+/*1. BASE STYLES */
+/* ----------------------- */
 html {
     font-family: "Open Sans", sans-serif;
     font-size: medium;
@@ -8,12 +11,29 @@ body {
     margin: 0;
 }
 
+/* ----------------------- */
+/* 2. LAYOUT */
+/* ----------------------- */
 main {
     width: 67vw;
     margin: 0 auto;
     background-color: #fcfcfc;
 }
 
+article.recipe {
+    margin: 0 auto;
+    padding: clamp(1.25rem, 3.35vw, 4rem);
+    max-width: 100%;
+}
+
+section {
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* ----------------------- */
+/* 3. COMPONENTS */
+/* ----------------------- */
 .headline-img {
     margin: 0;
     width: 100%;
@@ -27,23 +47,38 @@ main {
     object-fit: cover;
 }
 
-article {
-    margin: 0 auto;
-    padding: clamp(1.25rem, 3.35vw, 4rem);
-    max-width: 100%;
-}
-
 .summary-card {
     background-color: #ebebeb;
     margin: 1.5em 0;
     padding: 1em;
 }
 
-section {
-    margin: 0;
-    margin-bottom: 1.5rem;
+.serving-suggestions {
+    margin-bottom: 0;
 }
 
+.serving-suggestions__images {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2%;
+}
+
+.serving-suggestions__fig {
+    display: block;
+    margin: 0;
+    width: 49%;
+}
+
+.serving-suggestions__fig img {
+    max-width: 100%;
+    aspect-ratio: 6/5;
+    object-fit: cover;
+}
+
+/* ----------------------- */
+/* 4. TYPOGRAPHY */
+/* ----------------------- */
 h1 {
     color:#a10000;
     margin: 0;
@@ -53,10 +88,6 @@ h1 {
 h2 {
     font-size: clamp(1.3rem, 1.68vw, 5rem);
     margin-bottom: 0.7rem;
-}
-
-.not-bold {
-    font-weight: normal;
 }
 
 p {
@@ -70,25 +101,13 @@ ol {
     font-size: clamp(0.8rem, 1.25vw, 4rem);
 }
 
-figure.serving-suggestions {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 2%;
+.portions {
+    font-weight: normal;
 }
 
-.serving-suggestions img {
-    display: block;
-    margin: 0;
-    width: 49%;
-    aspect-ratio: 6/5;
-    object-fit: cover;
-}
-
-section.serving-suggestions {
-    margin-bottom: 0;
-}
-
+/* ----------------------- */
+/* 5. MEDIA QUERIES */
+/* ----------------------- */
 @media (max-width: 450px) {
     body {
         background-color: #fcfcfc;
@@ -103,14 +122,17 @@ section.serving-suggestions {
         aspect-ratio: 1/1.13;
     }
 
-    figure.serving-suggestions {
+    .serving-suggestions__images {
         flex-direction: column;
         gap: 1.5rem;
         height: auto;
     }
 
-    .serving-suggestions img {
+    .serving-suggestions__fig {
         width: 100%;
+    }
+
+    .serving-suggestions__fig img {
         aspect-ratio: 4/5;
     }
 }
