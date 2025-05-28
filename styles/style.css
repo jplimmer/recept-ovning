@@ -1,10 +1,10 @@
 html {
-    background-color: #a100004d;
     font-family: "Open Sans", sans-serif;
     font-size: medium;
 }
 
 body {
+    background-color: #a100004d;
     margin: 0;
 }
 
@@ -33,7 +33,7 @@ article {
     max-width: 100%;
 }
 
-.note-card {
+.summary-card {
     background-color: #ebebeb;
     margin: 1.5em 0;
     padding: 1em;
@@ -47,15 +47,15 @@ section {
 h1 {
     color:#a10000;
     margin: 0;
-    font-size: clamp(1.8rem, 2.1vw, 5rem);
+    font-size: clamp(1.8rem, 2.1vw, 6rem);
 }
 
 h2 {
-    font-size: clamp(1.3rem, 1.68vw, 4.5rem);
+    font-size: clamp(1.3rem, 1.68vw, 5rem);
     margin-bottom: 0.7rem;
 }
 
-.notbold {
+.not-bold {
     font-weight: normal;
 }
 
@@ -90,6 +90,10 @@ section.serving-suggestions {
 }
 
 @media (max-width: 450px) {
+    body {
+        background-color: #fcfcfc;
+    }
+    
     main {
         width: 100vw;
         margin: 0;
