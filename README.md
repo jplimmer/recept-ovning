@@ -16,7 +16,7 @@ This project is a frontend exercise to accurately recreate the visual layout and
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/jplimmer/pannkakor_sida.git
+git clone https://github.com/jplimmer/recept_ovning.git
 ```
 
 2. Open `index.html` in your browser.
