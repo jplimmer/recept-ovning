@@ -27,7 +27,7 @@ main {
     object-fit: cover;
 }
 
-article {
+article.recipe {
     margin: 0 auto;
     padding: clamp(1.25rem, 3.35vw, 4rem);
     max-width: 100%;
@@ -70,17 +70,21 @@ ol {
     font-size: clamp(0.8rem, 1.25vw, 4rem);
 }
 
-figure.serving-suggestions {
+div.serving-suggestions-images {
     display: flex;
     margin: 0;
     padding: 0;
     gap: 2%;
 }
 
-.serving-suggestions img {
+figure.serving-suggestions {
     display: block;
     margin: 0;
     width: 49%;
+}
+
+figure.serving-suggestions img {
+    max-width: 100%;
     aspect-ratio: 6/5;
     object-fit: cover;
 }
@@ -103,14 +107,17 @@ section.serving-suggestions {
         aspect-ratio: 1/1.13;
     }
 
-    figure.serving-suggestions {
+    div.serving-suggestions-images {
         flex-direction: column;
         gap: 1.5rem;
         height: auto;
     }
 
-    .serving-suggestions img {
+    figure.serving-suggestions {
         width: 100%;
+    }
+
+    figure.serving-suggestions img {
         aspect-ratio: 4/5;
     }
 }
