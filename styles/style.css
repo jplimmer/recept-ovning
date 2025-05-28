@@ -1,3 +1,6 @@
+/* ----------------------- */
+/*1. BASE STYLES */
+/* ----------------------- */
 html {
     font-family: "Open Sans", sans-serif;
     font-size: medium;
@@ -8,12 +11,29 @@ body {
     margin: 0;
 }
 
+/* ----------------------- */
+/* 2. LAYOUT */
+/* ----------------------- */
 main {
     width: 67vw;
     margin: 0 auto;
     background-color: #fcfcfc;
 }
 
+article.recipe {
+    margin: 0 auto;
+    padding: clamp(1.25rem, 3.35vw, 4rem);
+    max-width: 100%;
+}
+
+section {
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* ----------------------- */
+/* 3. COMPONENTS */
+/* ----------------------- */
 .headline-img {
     margin: 0;
     width: 100%;
@@ -27,47 +47,14 @@ main {
     object-fit: cover;
 }
 
-article.recipe {
-    margin: 0 auto;
-    padding: clamp(1.25rem, 3.35vw, 4rem);
-    max-width: 100%;
-}
-
 .summary-card {
     background-color: #ebebeb;
     margin: 1.5em 0;
     padding: 1em;
 }
 
-section {
-    margin: 0;
-    margin-bottom: 1.5rem;
-}
-
-h1 {
-    color:#a10000;
-    margin: 0;
-    font-size: clamp(1.8rem, 2.1vw, 6rem);
-}
-
-h2 {
-    font-size: clamp(1.3rem, 1.68vw, 5rem);
-    margin-bottom: 0.7rem;
-}
-
-.portions {
-    font-weight: normal;
-}
-
-p {
-    font-size: clamp(0.8rem, 1.25vw, 4rem);
-}
-
-ul,
-ol {
-    margin-top: 0;
-    padding-left: clamp(1.25rem, 2vw, 2.5rem);
-    font-size: clamp(0.8rem, 1.25vw, 4rem);
+section.serving-suggestions {
+    margin-bottom: 0;
 }
 
 div.serving-suggestions-images {
@@ -89,10 +76,38 @@ figure.serving-suggestions img {
     object-fit: cover;
 }
 
-section.serving-suggestions {
-    margin-bottom: 0;
+/* ----------------------- */
+/* 4. TYPOGRAPHY */
+/* ----------------------- */
+h1 {
+    color:#a10000;
+    margin: 0;
+    font-size: clamp(1.8rem, 2.1vw, 6rem);
 }
 
+h2 {
+    font-size: clamp(1.3rem, 1.68vw, 5rem);
+    margin-bottom: 0.7rem;
+}
+
+p {
+    font-size: clamp(0.8rem, 1.25vw, 4rem);
+}
+
+ul,
+ol {
+    margin-top: 0;
+    padding-left: clamp(1.25rem, 2vw, 2.5rem);
+    font-size: clamp(0.8rem, 1.25vw, 4rem);
+}
+
+.portions {
+    font-weight: normal;
+}
+
+/* ----------------------- */
+/* 5. MEDIA QUERIES */
+/* ----------------------- */
 @media (max-width: 450px) {
     body {
         background-color: #fcfcfc;
