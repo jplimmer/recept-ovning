@@ -23,29 +23,26 @@ main {
 article.recipe {
     margin: 0 auto;
     padding: clamp(1.25rem, 3.35vw, 4rem);
+    padding-top: 0;
     max-width: 100%;
 }
 
-section {
-    margin: 0;
-    margin-bottom: 1.5rem;
+.recipe .headline-img {
+    margin: 0 calc(clamp(1.25rem, 3.35vw, 4rem) * -1);
+    margin-bottom: 2rem;
+    width: auto;
+    aspect-ratio: 5/2;
+    overflow: hidden;
 }
 
-.ingredients__heading {
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
+header,
+section {
+    margin: 1.5rem 0;
 }
 
 /* ----------------------- */
 /* 3. COMPONENTS */
 /* ----------------------- */
-.headline-img {
-    margin: 0;
-    width: 100%;
-    aspect-ratio: 5/2;
-    overflow: hidden;
-}
 
 .headline-img img {
     width: 100%;
@@ -55,8 +52,15 @@ section {
 
 .summary-card {
     background-color: #ebebeb;
-    margin: 1.5em 0;
+    margin: 0.7em 0;
     padding: 1em;
+}
+
+.ingredients__heading {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
 }
 
 .serving-suggestions {
@@ -88,13 +92,15 @@ section {
 h1 {
     color:#a10000;
     margin: 0;
+    margin-bottom: 1rem;
     font-size: clamp(1.8rem, 2.1vw, 6rem);
 }
 
 h2,
 .ingredients__heading p {
     font-size: clamp(1.3rem, 1.68vw, 5rem);
-    margin-bottom: 0.7rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 p {
