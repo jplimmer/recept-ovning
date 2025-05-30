@@ -29,7 +29,7 @@ article.recipe {
 
 .recipe .headline-img {
     margin: 0 calc(clamp(1.25rem, 3.35vw, 4rem) * -1);
-    margin-bottom: 2rem;
+    margin-bottom: clamp(1.25rem, 3.35vw, 4rem);
     width: auto;
     aspect-ratio: 5/2;
     overflow: hidden;
@@ -81,6 +81,8 @@ section {
 }
 
 .serving-suggestions__fig img {
+    display: block;
+    width: 100%;
     max-width: 100%;
     aspect-ratio: 6/5;
     object-fit: cover;
