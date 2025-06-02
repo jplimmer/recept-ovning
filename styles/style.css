@@ -2,37 +2,35 @@
 /*1. BASE STYLES */
 /* ----------------------- */
 html {
-    font-family: "Open Sans", sans-serif;
-    font-size: medium;
+    font-size: 100%;
 }
 
 body {
+    font-family: "Open Sans", Arial, sans-serif;
     background-color: #a100004d;
-    margin: 0;
 }
 
 /* ----------------------- */
 /* 2. LAYOUT */
 /* ----------------------- */
 main {
-    width: 67vw;
-    margin: 0 auto;
+    width: min(2000px, 67vw);
+    margin-inline: auto;
     background-color: #fcfcfc;
 }
 
 article.recipe {
-    margin: 0 auto;
+    max-width: 100%;
     padding: clamp(1.25rem, 3.35vw, 4rem);
     padding-top: 0;
-    max-width: 100%;
 }
 
 .recipe .headline-img {
     margin: 0 calc(clamp(1.25rem, 3.35vw, 4rem) * -1);
     margin-bottom: clamp(1.25rem, 3.35vw, 4rem);
-    width: auto;
     aspect-ratio: 5/2;
     overflow: hidden;
+    /* width: auto; */
 }
 
 header,
@@ -43,7 +41,6 @@ section {
 /* ----------------------- */
 /* 3. COMPONENTS */
 /* ----------------------- */
-
 .headline-img img {
     width: 100%;
     height: 100%;
@@ -52,12 +49,11 @@ section {
 
 .summary-card {
     background-color: #ebebeb;
-    margin: 0.7em 0;
+    margin-block: 0.7em;
     padding: 1em;
 }
 
 .ingredients__heading {
-    margin: 0;
     display: flex;
     align-items: baseline;
     gap: 0.4rem;
@@ -69,21 +65,16 @@ section {
 
 .serving-suggestions__images {
     display: flex;
-    margin: 0;
-    padding: 0;
     gap: 2%;
 }
 
 .serving-suggestions__fig {
     display: block;
-    margin: 0;
     width: 49%;
 }
 
 .serving-suggestions__fig img {
-    display: block;
     width: 100%;
-    max-width: 100%;
     aspect-ratio: 6/5;
     object-fit: cover;
 }
@@ -93,15 +84,18 @@ section {
 /* ----------------------- */
 h1 {
     color:#a10000;
-    margin: 0;
+    font-weight: 700;
     margin-bottom: 1rem;
     font-size: clamp(1.8rem, 2.1vw, 6rem);
 }
 
+h2 {
+    font-weight: 700;
+}
+
 h2,
-.ingredients__heading p {
+.ingredients__heading {
     font-size: clamp(1.3rem, 1.68vw, 5rem);
-    margin: 0;
     margin-bottom: 0.5rem;
 }
 
@@ -111,8 +105,7 @@ p {
 
 ul,
 ol {
-    margin-top: 0;
-    padding-left: clamp(1.25rem, 2vw, 2.5rem);
+    padding-left: clamp(1.25rem, 2vw, 2.5rem); /* simplify */
     font-size: clamp(0.8rem, 1.25vw, 4rem);
 }
 
@@ -126,10 +119,9 @@ ol {
     
     main {
         width: 100vw;
-        margin: 0;
     }
 
-    .headline-img {
+    .recipe .headline-img {
         aspect-ratio: 1/1.13;
     }
 
