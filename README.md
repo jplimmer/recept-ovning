@@ -25,6 +25,7 @@ git clone https://github.com/jplimmer/recept-ovning.git
 ```
 ├── index.html
 ├── styles/
+│   ├── reset.css
 │   └── styles.css
 ├── images/
 │   └── (image assets)
