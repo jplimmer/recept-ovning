@@ -11,15 +11,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <style>
-            :where(h1) {
-                font-size: 2em;
-            }
-        </style>
     </head>
     <body>
         <main>
-            <article class="recipe">
+            <article class="[ flow ] [ recipe ]">
                 <figure class="headline-img">
                     <img src="images/pannkakor_main.webp"
                          srcset="images/pannkakor_main_450w.webp 450w,
@@ -31,9 +26,9 @@
                          sizes="(min-width: 460px) 67vw, 167vw"
                          alt="Tunna pannkakor serverade på en tallrik med hallon och grädde på toppen.">
                 </figure>
-                <header class="description">
+                <header class="[ flow ] [ description ]">
                     <h1>Enkelt recept på pannkakor</h1>
-                    <p class="summary-card">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
+                    <p class="[ p-s ][ summary-card ]">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
                 </header>
                 <section class="ingredients">
                     <hgroup class="ingredients__heading">
@@ -62,10 +57,9 @@
                 </section>
                 <section class="serving-suggestions">
                     <h2>Serveringsförslag</h2>
-                    <div class="serving-suggestions__images">
-                        <!-- <ul>
-                            <li> -->
-                                <figure class="serving-suggestions__fig">
+                        <ul class="serving-suggestions__list" role="list">
+                            <li>
+                                <figure>
                                     <img src="images/servering_1.webp"
                                          srcset="images/servering_1_450w.webp 450w,
                                                  images/servering_1_700w.webp 700w"
@@ -75,16 +69,15 @@
                                          alt="Pannkakor serverade på en tallrik med grädde och citron på sidan."
                                          loading="lazy">
                                 </figure>
-                            <!-- </li>
-                            <li> -->
-                                <figure class="serving-suggestions__fig">
+                            </li>
+                            <li>
+                                <figure>
                                     <img src="images/servering_2.webp"
                                          alt="Två pannkakor serverade på en vit tallrik med grädde och en skalad citronskiva på toppen."
                                          loading="lazy">
                                 </figure>
-                            <!-- </li>
-                        </ul> -->
-                    </div>
+                            </li>
+                        </ul>
                 </section>
             </article>
         </main>
