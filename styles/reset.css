@@ -72,7 +72,7 @@ a:not([class]) {
   color: currentColor;
 }
 
-/* Make sure textareas without a rows attribute are not tiny */
+/* Make sure text areas without a rows attribute are not tiny */
 textarea:not([rows]) {
   min-height: 10em
 }
@@ -81,4 +81,11 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* for container queries, landmarks as containers */
+body > :is(header, footer),
+main {
+  container-type: inline-size;
+}
+
 

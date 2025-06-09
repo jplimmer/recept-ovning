@@ -1,81 +1,149 @@
 /* ----------------------- */
+/* || THEME */
+/* ----------------------- */
+:root {
+    /* Colours */
+    --clr-neutral-200: #fcfcfc;
+    --clr-neutral-400: #ebebeb;
+    --clr-red-200: #a100004d;
+    --clr-red-400: #a10000;
+
+    /* Typography */
+    --font-base: "Open Sans";
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    
+    --fs-regular: clamp(0.8rem, 1.2vw, 4rem);
+    --fs-large: clamp(1.3rem, 1.68vw, 5rem);
+    --fs-xlarge: clamp(1.8rem, 2.1vw, 6rem);
+
+    --lh-small: 1.1;
+    --lh-normal: 1.5;
+
+    /* Layout */
+    --flow-space: 2em;
+    --padding-small: 1rem;
+    --padding-large: clamp(1.25rem, 3.35vw, 4rem);
+
+    /* Media */
+    --ar-h-large: 5/2;
+    --ar-h-small: 6/5;
+    --ar-v: 4/5;
+}
+
+
+/* ----------------------- */
 /* || GLOBAL STYLES */
 /* ----------------------- */
-/* :root {
-
-} */
-
 html {
     font-size: 100%;
 }
 
 body {
-    font-family: "Open Sans", Arial, sans-serif;
-    background-color: #a100004d;
+    font-family: var(--font-base, Arial, sans-serif);
+    line-height: var(--lh-normal, 1.5);
+    background-color: var(--clr-red-200, lightpink);
+}
+
+main {
+    width: min(2000px, 67vw);
+    margin-inline: auto;
+    background-color: var(--clr-neutral-200, bisque);
+}
+
+h1, h2 {
+    line-height: var(--lh-small, 1.1);
+    font-weight: var(--fw-bold, 700);
+}
+
+h1 {
+    color: var(--clr-red-400, red);
+    font-size: var(--fs-xlarge);
+}
+
+h2, .ingredients__heading {
+    font-size: var(--fs-large);
+    margin-bottom: 0.5rem;
+}
+
+p, ul, ol {
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+}
+
+ul, ol {
+    padding-left: 2rem;
 }
 
 
 /* ----------------------- */
 /* || COMPOSITION */
 /* ----------------------- */
-
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1em);
+}
 
 /* ----------------------- */
 /* || UTILITY */
 /* ----------------------- */
+.p-s {
+    padding: var(--padding-small, 1rem);
+}
 
+.p-m {
+    padding: var(--padding-medium, 2rem);
+}
+
+.p-l {
+    padding: var(--padding-large, 4rem);
+}
 
 /* ----------------------- */
 /* || BLOCK */
 /* ----------------------- */
-
-
-/* ----------------------- */
-/* || EXCEPTION */
-/* ----------------------- */
-
-
-/* ----------------------- */
-/* 2. LAYOUT */
-/* ----------------------- */
-main {
-    width: min(2000px, 67vw);
-    margin-inline: auto;
-    background-color: #fcfcfc;
-}
-
 .recipe {
     max-width: 100%;
-    padding: clamp(1.25rem, 3.35vw, 4rem);
+    padding: var(--padding-large, 4rem);
     padding-top: 0;
 }
 
 .headline-img {
-    margin: 0 calc(clamp(1.25rem, 3.35vw, 4rem) * -1);
-    margin-bottom: clamp(1.25rem, 3.35vw, 4rem);
-    aspect-ratio: 5/2;
+    margin-inline: calc(var(--padding-large, 4rem) * -1);
+    margin-bottom: var(--padding-large, 4rem);
+    aspect-ratio: var(--ar-h-large);
     overflow: hidden;
-    /* width: auto; */
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-header,
-section {
-    margin: 1.5rem 0;
+.serving-suggestions__list {
+    display: flex;
+    gap: 2%; 
+    /* magic number? */
+
+    li {
+        width: 49%;
+        /* magic number? */
+
+        img {
+            width: 100%;
+            aspect-ratio: var(--ar-h-small, 6/5);
+            object-fit: cover;
+        }
+    }
 }
 
 /* ----------------------- */
-/* 3. COMPONENTS */
+/* || EXCEPTION */
 /* ----------------------- */
-.headline-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .summary-card {
-    background-color: #ebebeb;
-    margin-block: 0.7em;
-    padding: 1em;
+    background-color: var(--clr-neutral-400);
 }
 
 .ingredients__heading {
@@ -84,69 +152,14 @@ section {
     gap: 0.4rem;
 }
 
-.serving-suggestions {
-    margin-bottom: 0;
-}
-
-.serving-suggestions__list {
-    display: flex;
-    gap: 2%; /* magic number? */
-
-    li {
-        width: 49%; /* magic number? */
-
-        img {
-            width: 100%;
-            aspect-ratio: 6/5;
-            object-fit: cover;
-        }
-    }
-}
-
-/* ----------------------- */
-/* 4. TYPOGRAPHY */
-/* ----------------------- */
-h1 {
-    color:#a10000;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    font-size: clamp(1.8rem, 2.1vw, 6rem);
-}
-
-h2 {
-    font-weight: 700;
-}
-
-h2,
-.ingredients__heading {
-    font-size: clamp(1.3rem, 1.68vw, 5rem);
-    margin-bottom: 0.5rem;
-}
-
-p {
-    font-size: clamp(0.8rem, 1.25vw, 4rem);
-}
-
-ul,
-ol {
-    padding-left: clamp(1.25rem, 2vw, 2.5rem); /* simplify */
-    font-size: clamp(0.8rem, 1.25vw, 4rem);
-}
-
-/* ----------------------- */
-/* 5. MEDIA QUERIES */
-/* ----------------------- */
-@media (max-width: 450px) {
-    body {
-        background-color: #fcfcfc;
-    }
-    
+/* Media queries */
+@media (max-width: 450px) {    
     main {
         width: 100vw;
     }
 
     .headline-img {
-        aspect-ratio: 1/1.13;
+        aspect-ratio: var(--ar-v, 4/5);
     }
 
     .serving-suggestions__list {
@@ -158,7 +171,7 @@ ol {
             width: 100%;
 
             img {
-                aspect-ratio: 4/5;
+                aspect-ratio: var(--ar-v, 4/5);
             }
         }
     }
